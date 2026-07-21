@@ -14,7 +14,7 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '10'))
         
-        // NOTA: Si instalas el plugin "AnsiColor", descomenta la siguiente línea:
+        // NOTA: Si instalas el plugin "AnsiColor", descomenta la siguiente línea: 
         // ansiColor('xterm')
     }
 
