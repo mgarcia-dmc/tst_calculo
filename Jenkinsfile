@@ -38,15 +38,15 @@ pipeline {
             }
         }
         
-        stage('3. Ejecutar Cálculo y Envío de Reporte') {
-            steps {
-                echo "--------------------------------------------------"
-                echo "> Ejecutando app/main.py dentro del contenedor"
-                echo "--------------------------------------------------"
-                // Reemplaza 'calculo_app' por el nombre de tu servicio en el docker-compose.yml
-                sh 'docker compose -p ${COMPOSE_PROJECT_NAME} up --abort-on-container-exit --exit-code-from calculo_app'
-            }
-        }
+		stage('3. Ejecutar Cálculo y Envío de Reporte') {
+			steps {
+				echo "--------------------------------------------------"
+				echo "> Ejecutando app/main.py dentro del contenedor"
+				echo "--------------------------------------------------"
+				// Cambiamos 'calculo_app' por 'app'
+				sh 'docker compose -p ${COMPOSE_PROJECT_NAME} up --abort-on-container-exit --exit-code-from app'
+			}
+		}
     }
 
     post {
