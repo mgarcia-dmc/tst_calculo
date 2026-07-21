@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent azure_agent
 
     environment {
         // Variables de entorno para el proceso
